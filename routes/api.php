@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/webhook', [\App\Http\Controllers\WebhookController::class, 'index']);
-
+Route::apiResource('items', App\Http\Controllers\ItemController::class);
 Route::get('/lif', [\App\Http\Controllers\ApiController::class, 'index']);
